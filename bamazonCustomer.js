@@ -66,7 +66,7 @@ function checkProduct(id, quantity) {
         console.log("Purchase now.");
         buyProduct(id, quantity);
       } else {
-        console.log("Not enough!");
+        console.log("Insufficient Quantity!");
         connection.end();
       };
   });

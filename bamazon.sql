@@ -34,7 +34,9 @@
 --    * Once the update goes through, show the customer the total cost of their purchase.
 
 -- - - -
+CREATE DATABASE bamazon;
 
+USE bamazon;
 DROP TABLE IF EXISTS products;
 
 CREATE TABLE products (
@@ -44,7 +46,7 @@ CREATE TABLE products (
   price decimal(8,2) DEFAULT NULL,
   stock_quantity int(6) DEFAULT NULL,
   PRIMARY KEY (item_id)
-)
+);
 
 INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
 VALUES
