@@ -18,7 +18,7 @@ connection.connect(function(err) {
 });
 
 var stock = 0;
-var updatedQuantity = 0;
+var updateQuantity = 0;
 
 function showStore() {
   var table = new Table({
@@ -73,9 +73,9 @@ function checkProduct(id, quantity) {
 }; 
   
 function buyProduct(id, quantity){
-  updatedQuantity = stock - quantity;
+  updateQuantity = stock - quantity;
   var query = "UPDATE products SET ? WHERE ?";
-    connection.query(query, [{stock_quantity: updatedQuantity}, {item_id: id}], function(err, res) {
+    connection.query(query, [{stock_quantity: updateQuantity}, {item_id: id}], function(err, res) {
       console.log("Purchase is successful!");
       showPrice(id, quantity);
     }
