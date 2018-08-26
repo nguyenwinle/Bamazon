@@ -35,10 +35,29 @@
 
 -- - - -
 
+DROP TABLE IF EXISTS products;
 
+CREATE TABLE products (
+  item_id int(6) NOT NULL AUTO_INCREMENT,
+  product_name varchar(30) NOT NULL,
+  department_name varchar(30) NOT NULL,
+  price decimal(8,2) DEFAULT NULL,
+  stock_quantity int(6) DEFAULT NULL,
+  PRIMARY KEY (item_id)
+)
 
-
-
+INSERT INTO products (item_id, product_name, department_name, price, stock_quantity)
+VALUES
+	(1,'ipod','electronics',250.50,100),
+	(2,'headphones','electronics',50.99,100),
+	(3,'tshirt','clothing',10.99,30),
+	(4,'nike free run','shoes',89.99,44),
+	(5,'necklace','accessories',24.99,50),
+	(6,'dog food','Dog',4.99,10),
+	(7,'coconut oil','food',9.99,15),
+	(8,'macbook charger','accessories',80.99,30),
+	(9,'chair','home',15.99,50),
+	(10,'hdtv','electronics',399.99,12);
 
 
 -- ### Challenge #3: Supervisor View (Final Level)
